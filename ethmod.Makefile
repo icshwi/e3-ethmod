@@ -25,16 +25,16 @@
 # Please look at many other _module_.Makefile in e3-* repository
 # 
 
-#where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+where_am_I := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
 
 include $(REQUIRE_TOOLS)/driver.makefile
 
-# APP:=calcApp
-# APPDB:=$(APP)/Db
-# APPSRC:=$(APP)/src
+APP:=ethmodApp
+APPDB:=$(APP)/Db
+APPSRC:=$(APP)/src
 
 
-# USR_INCLUDES += -I$(where_am_I)/$(APPSRC)
+USR_INCLUDES += -I$(where_am_I)/$(APPSRC)
 
 # USR_CFLAGS   += -Wno-unused-variable
 # USR_CFLAGS   += -Wno-unused-function
@@ -59,6 +59,7 @@ include $(REQUIRE_TOOLS)/driver.makefile
 # HEADERS += $(APPSRC)/sCalcPostfix.h
 # HEADERS += $(APPSRC)/aCalcPostfix.h
 # HEADERS += $(DBDINC_HDRS)
+HEADERS += $(wildcard $(APPSRC)/*.h)
 
 
 # SOURCES += $(APPSRC)/sCalcPostfix.c
@@ -76,12 +77,15 @@ include $(REQUIRE_TOOLS)/driver.makefile
 # SOURCES += $(APPSRC)/interp.c
 # SOURCES += $(APPSRC)/arrayTest.c
 # SOURCES += $(APPSRC)/aCalcMonitorMem.c
+SOURCES += $(wildcard $(APPSRC)/*.cpp)
+
 # # DBDINC_SRCS should be last of the series of SOURCES
 # SOURCES += $(DBDINC_SRCS)
 
 # DBDS += $(APPSRC)/calcSupport_LOCAL.dbd
 # DBDS += $(APPSRC)/calcSupport_withSNCSEQ.dbd
 # DBDS += $(APPSRC)/calcSupport_withSSCAN.dbd
+DBDS += $(APPSRC)/ethmodSupport.dbd
 
 
 # $(DBDINC_DEPS): $(DBDINC_HDRS)
@@ -112,4 +116,24 @@ include $(REQUIRE_TOOLS)/driver.makefile
 
 #
 
+EPICS_BASE_HOST_BIN = $(EPICS_BASE)/bin/$(EPICS_HOST_ARCH)
+MSI =  $(EPICS_BASE_HOST_BIN)/msi
+
+USR_DBFLAGS += -I . -I ..
+USR_DBFLAGS += -I $(EPICS_BASE)/db
+USR_DBFLAGS += -I $(APPDB)
+
+
+ETHMOD_SUBS := $(APPDB)/e_pickup-ess.substitutions
+ETHMOD_SUBS += $(APPDB)/pindiode-ess.substitutions
+
+db: $(ETHMOD_SUBS)
+
+$(ETHMOD_SUBS):
+	@printf "Inflating database ... %44s >>> %40s \n" "$@" "$(basename $(@)).db"
+	@rm -f $(basename $(@)).db.d $(basename $(@)).db
+	@$(MSI) -D $(USR_DBFLAGS) -o $(basename $(@)).db -S $@  > $(basename $(@)).db.d
+	@$(MSI)    $(USR_DBFLAGS) -o $(basename $(@)).db -S $@
+
+.PHONY: db $(ETHMOD_SUBS)
 

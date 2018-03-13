@@ -2,7 +2,7 @@
 ## This RULE should be used in case of inflating DB files
 ## 
 
-#.PHONY: db
+.PHONY: db
 
 ### We have to think how to find $(EPICS_BASE) and
 ### $(EPICS_HOST_ARCH) during driver.makefile
@@ -18,6 +18,16 @@
 ### 5) make install 
 ###   ..... 
 
-#db: conf
-#	$(QUIET) make $(M_OPTIONS) db
+db: conf
+	@install -m 644 $(TOP)/template/*.substitutions $(EPICS_MODULE_SRC_PATH)/ethmodApp/Db/
 
+ifndef $(EPICS_BASE)
+	$(QUIET) echo ""
+	$(QUIET) echo "No EPICS_BASE is defined. Sourcing.... "
+	$(QUIET) echo "We are using the default and only one EPICS base in order to inflat sub files to db files"
+	$(QUIET) bash -c "source $(TOP)/$(E3_ENV_NAME)/setE3Env.bash && make $(M_OPTIONS) db"
+
+else
+	$(QUIET) make $(M_OPTIONS) db
+
+endif
