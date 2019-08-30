@@ -1,9 +1,4 @@
-[submodule "e3-env"]
-	path = e3-env
-	url = https://github.com/icshwi/e3-env
-	ignore = all
-	ignore = all
 [submodule "ethmod"]
 	path = ethmod
-	url = https://github.com/icshwi/ethmod
+	url = git@gitlab.esss.lu.se:beam-diagnostics/bde/epics/modules/ethmod.git
 	ignore = all
