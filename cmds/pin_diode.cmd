@@ -12,6 +12,11 @@ epicsEnvSet("I2C_LTC2991_PORT",     "AK_I2C_LTC2991")
 epicsEnvSet("I2C_M24M02_PORT",      "AK_I2C_M24M02")
 epicsEnvSet("I2C_IP_PORT",          "AK_I2C_COMM")
 
+epicsEnvSet("R_TMP100",  "I2C1:Temp1:")
+epicsEnvSet("R_M24M02",  "I2C1:Eeprom1:")
+epicsEnvSet("R_TCA9555", "I2C1:IOExp1:")
+epicsEnvSet("R_LTC2991", "I2C1:VMon1:")
+
 # Supported IP port types (see AKBase.h)
 #AK_IP_PORT_INVALID       0
 #AK_IP_PORT_RS232         1
@@ -37,31 +42,32 @@ drvAsynIPPortConfigure($(I2C_IP_PORT),$(AK_IP_PORT_ADDR))
 # AKI2CTMP100Configure(const char *portName, const char *ipPort,
 #        int devCount, const char *devInfos, int priority, int stackSize);
 AKI2CTMP100Configure($(I2C_TMP100_PORT), $(I2C_IP_PORT), 1, "0x49", 1, 0, 0)
-dbLoadRecords("AKI2C_TMP100.db",       "P=$(PREFIX),R=I2C1:Temp1:,PORT=$(I2C_TMP100_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1")
+dbLoadRecords("AKI2C_TMP100.db",       "P=$(PREFIX),R=$(R_TMP100),PORT=$(I2C_TMP100_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1")
 #asynSetTraceIOMask($(I2C_TMP100_PORT),0,255)
 #asynSetTraceMask($(I2C_TMP100_PORT),0,255)
 
 # AKI2CM24M02Configure(const char *portName, const char *ipPort,
 #        int devCount, const char *devInfos, int priority, int stackSize);
 AKI2CM24M02Configure($(I2C_M24M02_PORT), $(I2C_IP_PORT), 1, "0x50", 1, 0, 0)
-dbLoadRecords("AKI2C_M24M02.db",       "P=$(PREFIX),R=I2C1:Eeprom1:,PORT=$(I2C_M24M02_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1,NELM=262144")
+dbLoadRecords("AKI2C_M24M02.db",       "P=$(PREFIX),R=$(R_M24M02),PORT=$(I2C_M24M02_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1,NELM=262144")
 #asynSetTraceIOMask($(I2C_M24M02_PORT),0,255)
 #asynSetTraceMask($(I2C_M24M02_PORT),0,255)
 
 # AKI2CTCA9555Configure(const char *portName, const char *ipPort,
 #        int devCount, const char *devInfos, int priority, int stackSize);
 AKI2CTCA9555Configure($(I2C_TCA9555_PORT), $(I2C_IP_PORT), 1, "0x21", 1, 0, 0)
-dbLoadRecords("AKI2C_TCA9555.db",        "P=$(PREFIX),R=I2C1:IOExp1:,PORT=$(I2C_TCA9555_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1")
+dbLoadRecords("AKI2C_TCA9555.db",        "P=$(PREFIX),R=$(R_TCA9555),PORT=$(I2C_TCA9555_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1")
 #asynSetTraceIOMask($(I2C_TCA9555_PORT),0,255)
 #asynSetTraceMask($(I2C_TCA9555_PORT),0,255)
 
 # AKI2CLTC2991Configure(const char *portName, const char *ipPort,
 #        int devCount, const char *devInfos, int priority, int stackSize);
 AKI2CLTC2991Configure($(I2C_LTC2991_PORT), $(I2C_IP_PORT), 1, "0x90", 0, 0, 1, 0, 0)
-dbLoadRecords("AKI2C_LTC2991.db",        "P=$(PREFIX),R=I2C1:VMon1:,PORT=$(I2C_LTC2991_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1")
+dbLoadRecords("AKI2C_LTC2991.db",        "P=$(PREFIX),R=$(R_LTC2991),PORT=$(I2C_LTC2991_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1")
 #asynSetTraceIOMask($(I2C_LTC2991_PORT),0,255)
 #asynSetTraceMask($(I2C_LTC2991_PORT),0,255)
 
+dbLoadRecords("PinDiode.template","P=$(PREFIX), R_LTC2991=$(R_LTC2991), R_TMP100=$(R_TMP100), R_M24M02=$(R_M24M02), R_TCA9555=$(R_TCA9555)")
 
 #set_requestfile_path("./")
 #set_requestfile_path("$(ETHMOD)/ethmodApp/Db")
@@ -77,4 +83,3 @@ iocInit()
 # save things every thirty seconds
 #create_monitor_set("${TOP}/iocBoot/${IOC}/auto_settings.req", 30,"P=$(PREFIX)")
 
-dbpf $(PREFIX)I2C1:Temp1:Read.SCAN ".5 second"
