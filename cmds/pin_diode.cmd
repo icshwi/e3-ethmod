@@ -12,10 +12,10 @@ epicsEnvSet("I2C_LTC2991_PORT",     "AK_I2C_LTC2991")
 epicsEnvSet("I2C_M24M02_PORT",      "AK_I2C_M24M02")
 epicsEnvSet("I2C_IP_PORT",          "AK_I2C_COMM")
 
-epicsEnvSet("R_TMP100",  "I2C1:Temp1:")
-epicsEnvSet("R_M24M02",  "I2C1:Eeprom1:")
-epicsEnvSet("R_TCA9555", "I2C1:IOExp1:")
-epicsEnvSet("R_LTC2991", "I2C1:VMon1:")
+epicsEnvSet("R_TMP100",  ":Temp-")
+epicsEnvSet("R_M24M02",  ":Eeprom-")
+epicsEnvSet("R_TCA9555", ":IOExp-")
+epicsEnvSet("R_LTC2991", ":VMon-")
 
 # Supported IP port types (see AKBase.h)
 #AK_IP_PORT_INVALID       0
@@ -60,6 +60,11 @@ dbLoadRecords("AKI2C_TCA9555.db",        "P=$(PREFIX),R=$(R_TCA9555),PORT=$(I2C_
 #asynSetTraceIOMask($(I2C_TCA9555_PORT),0,255)
 #asynSetTraceMask($(I2C_TCA9555_PORT),0,255)
 
+afterInit("dbpf $(PREFIX)$(R_TCA9555)DirPin0 0")
+afterInit("dbpf $(PREFIX)$(R_TCA9555)DirPin1 0")
+afterInit("dbpf $(PREFIX)$(R_TCA9555)LevelPin0 0")
+afterInit("dbpf $(PREFIX)$(R_TCA9555)LevelPin1 0")
+
 # AKI2CLTC2991Configure(const char *portName, const char *ipPort,
 #        int devCount, const char *devInfos, int priority, int stackSize);
 AKI2CLTC2991Configure($(I2C_LTC2991_PORT), $(I2C_IP_PORT), 1, "0x48", 0, 0, 1, 0, 0)
@@ -67,7 +72,7 @@ dbLoadRecords("AKI2C_LTC2991.db",        "P=$(PREFIX),R=$(R_LTC2991),PORT=$(I2C_
 #asynSetTraceIOMask($(I2C_LTC2991_PORT),0,255)
 #asynSetTraceMask($(I2C_LTC2991_PORT),0,255)
 
-dbLoadRecords("PinDiode.template","P=$(PREFIX), R_LTC2991=$(R_LTC2991), R_TMP100=$(R_TMP100), R_M24M02=$(R_M24M02), R_TCA9555=$(R_TCA9555)")
+dbLoadRecords("pinDiode.db","P=$(PREFIX), R_LTC2991=$(R_LTC2991), R_TMP100=$(R_TMP100), R_M24M02=$(R_M24M02), R_TCA9555=$(R_TCA9555)")
 
 #set_requestfile_path("./")
 #set_requestfile_path("$(ETHMOD)/ethmodApp/Db")

@@ -1,0 +1,44 @@
+record(calc, "$(P)$(R_LTC2991)CurrMonitor") {
+    field(DESC, "Current Consumption")
+    field(CALC, "(B-A)*2")
+    field(INPA, "$(P)$(R_LTC2991)ValueV1_RBV CP")
+    field(INPB, "$(P)$(R_LTC2991)ValueV2_RBV CP")
+}
+
+record(calc, "$(P)$(R_LTC2991)VolDigital") {
+    field(DESC, "Digital Voltage")
+    field(CALC, "a*2")
+    field(INPA, "$(P)$(R_LTC2991)ValueV5_RBV CP")
+}
+
+record(calc, "$(P)$(R_LTC2991)VolAnalog") {
+    field(DESC, "Analog Voltage")
+    field(CALC, "a*2")
+    field(INPA, "$(P)$(R_LTC2991)ValueV6_RBV CP")
+}
+
+record("*", "$(P)$(R_LTC2991)Trigger")
+{
+    field(SCAN, ".5 second")
+}
+
+
+record("*", "$(P)$(R_LTC2991)Read")
+{
+    field(SCAN, ".5 second")
+}
+
+#========================================================
+
+record("*", "$(P)$(R_TMP100)Read")
+{
+    field(SCAN, ".5 second")
+}
+
+#========================================================
+
+record("*", "$(P)$(R_TCA9555)Read")
+{
+    field(SCAN, ".5 second")
+}
+
