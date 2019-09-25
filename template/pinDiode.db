@@ -27,7 +27,6 @@ record("*", "$(P)$(R_LTC2991)Trigger")
     field(SCAN, ".5 second")
 }
 
-
 record("*", "$(P)$(R_LTC2991)Read")
 {
     field(SCAN, ".5 second")
@@ -43,7 +42,6 @@ record("*", "$(P)$(R_TMP100)Value_RBV")
 {
     field(EGU, "C")
 }
-
 
 #========================================================
 #===== Port extender

@@ -59,7 +59,7 @@ AKI2CTCA9555Configure($(I2C_TCA9555_PORT), $(I2C_IP_PORT), 1, "0x21", 1, 0, 0)
 dbLoadRecords("AKI2C_TCA9555.db",        "P=$(PREFIX),R=$(R_TCA9555),PORT=$(I2C_TCA9555_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1")
 #asynSetTraceIOMask($(I2C_TCA9555_PORT),0,255)
 #asynSetTraceMask($(I2C_TCA9555_PORT),0,255)
-
+# use dbpf since record(*,"record_name") doesn't work for VAL field
 afterInit("dbpf $(PREFIX)$(R_TCA9555)DirPin0 0")
 afterInit("dbpf $(PREFIX)$(R_TCA9555)DirPin1 0")
 afterInit("dbpf $(PREFIX)$(R_TCA9555)LevelPin0 0")
@@ -72,6 +72,7 @@ dbLoadRecords("AKI2C_LTC2991.db",        "P=$(PREFIX),R=$(R_LTC2991),PORT=$(I2C_
 #asynSetTraceIOMask($(I2C_LTC2991_PORT),0,255)
 #asynSetTraceMask($(I2C_LTC2991_PORT),0,255)
 
+# Load initialization database
 dbLoadRecords("pinDiode.db","P=$(PREFIX), R_LTC2991=$(R_LTC2991), R_TMP100=$(R_TMP100), R_M24M02=$(R_M24M02), R_TCA9555=$(R_TCA9555)")
 
 #set_requestfile_path("./")
