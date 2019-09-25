@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <macros>
+    <P>TS2-010RFC:RFS-PIND-110</P>
+  </macros>
+  <width>280</width>
+  <height>300</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="group" version="2.0.0">
+    <name>Pin Diode</name>
+    <macros>
+      <R_LTC2991>:VMon-</R_LTC2991>
+      <R_M24M02>:Eeprom-</R_M24M02>
+      <R_TCA9555>:IOExp-</R_TCA9555>
+      <R_TMP100>:Temp-</R_TMP100>
+    </macros>
+    <x>10</x>
+    <y>10</y>
+    <width>260</width>
+    <height>281</height>
+    <widget type="led" version="2.0.0">
+      <name>LED</name>
+      <pv_name>$(P)$(R_TCA9555)LevelPin6_RBV</pv_name>
+      <x>90</x>
+      <y>14</y>
+      <width>17</width>
+      <height>17</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_10</name>
+      <text>P6</text>
+      <x>113</x>
+      <y>11</y>
+      <width>28</width>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_1</name>
+      <pv_name>$(P)$(R_TCA9555)LevelPin7_RBV</pv_name>
+      <x>90</x>
+      <y>37</y>
+      <width>17</width>
+      <height>17</height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_11</name>
+      <text>P7</text>
+      <x>113</x>
+      <y>34</y>
+      <width>28</width>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_2</name>
+      <actions>
+        <action type="open_display">
+          <file>Eng OPIs/Menu.opi</file>
+          <target>standalone</target>
+          <description>Open Display</description>
+        </action>
+      </actions>
+      <text>...</text>
+      <x>183</x>
+      <y>1</y>
+      <width>34</width>
+      <height>23</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>3</x>
+      <y>114</y>
+      <width>207</width>
+      <height>120</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_12</name>
+        <text>Board temperature:</text>
+        <y>8</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_1</name>
+        <pv_name>$(P)$(R_TMP100)Value_RBV</pv_name>
+        <x>147</x>
+        <y>13</y>
+        <width>60</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_13</name>
+        <text>Curr. Consumption:</text>
+        <y>35</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_9</name>
+        <pv_name>$(P)$(R_LTC2991)CurrMonitor</pv_name>
+        <x>147</x>
+        <y>38</y>
+        <width>60</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_14</name>
+        <text>Analog Voltage:</text>
+        <y>62</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_10</name>
+        <pv_name>$(P)$(R_LTC2991)AnaVol</pv_name>
+        <x>147</x>
+        <y>63</y>
+        <width>60</width>
+        <precision>2</precision>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_15</name>
+        <text>DigitalVoltage:</text>
+        <y>90</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_11</name>
+        <pv_name>$(P)$(R_LTC2991)DigVol</pv_name>
+        <x>147</x>
+        <y>90</y>
+        <width>60</width>
+        <precision>2</precision>
+      </widget>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>34</x>
+      <y>62</y>
+      <width>144</width>
+      <height>35</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="symbol" version="2.0.0">
+        <name>Symbol_1</name>
+        <pv_name>$(P)SwitchStatus</pv_name>
+        <symbols>
+          <symbol>symbols/switch_off.gif</symbol>
+          <symbol>symbols/switch_on.gif</symbol>
+        </symbols>
+        <x>48</x>
+        <width>48</width>
+        <height>35</height>
+      </widget>
+      <widget type="polyline" version="2.0.0">
+        <name>Polyline</name>
+        <y>26</y>
+        <width>50</width>
+        <height>1</height>
+        <line_color>
+          <color name="BLACK" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <points>
+          <point x="50.00000273455001" y="0.0">
+          </point>
+          <point x="0.0" y="0.0">
+          </point>
+        </points>
+      </widget>
+      <widget type="polyline" version="2.0.0">
+        <name>Polyline_1</name>
+        <x>94</x>
+        <y>26</y>
+        <width>50</width>
+        <height>1</height>
+        <line_color>
+          <color name="BLACK" red="0" green="0" blue="0">
+          </color>
+        </line_color>
+        <points>
+          <point x="50.00000273455001" y="0.0">
+          </point>
+          <point x="0.0" y="0.0">
+          </point>
+        </points>
+      </widget>
+    </widget>
+  </widget>
+</display>

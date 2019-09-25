@@ -10,7 +10,7 @@
   <background_color>
     <color red="240" green="240" blue="240" />
   </background_color>
-  <boy_version>5.1.0.201701311021</boy_version>
+  <boy_version>5.1.0</boy_version>
   <foreground_color>
     <color red="192" green="192" blue="192" />
   </foreground_color>
@@ -56,7 +56,7 @@
     </fg_gradient_color>
     <fill_level>0.0</fill_level>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -106,7 +106,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -155,7 +155,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -205,7 +205,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -252,7 +252,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -301,7 +301,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -341,7 +341,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="1" pixels="false">Default Bold</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="1" pixels="false">Default Bold</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -384,7 +384,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -433,7 +433,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -476,7 +476,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -525,7 +525,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -568,7 +568,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -617,7 +617,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -661,7 +661,7 @@ $(pv_value)</tooltip>
     <confirm_message></confirm_message>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -717,7 +717,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -766,7 +766,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -810,7 +810,7 @@ $(pv_value)</tooltip>
     <confirm_message></confirm_message>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -873,7 +873,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -917,7 +917,7 @@ $(pv_value)</tooltip>
     <border_width>1</border_width>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <foreground_color>
       <color red="0" green="0" blue="0" />
@@ -961,7 +961,7 @@ $(pv_value)</tooltip>
     <confirm_message></confirm_message>
     <enabled>true</enabled>
     <font>
-      <opifont.name fontName="Noto Sans" height="9" style="0" pixels="false">Default</opifont.name>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
     </font>
     <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
     <foreground_color>
@@ -977,7 +977,7 @@ $(pv_value)</tooltip>
     <name>Text Input_2</name>
     <precision>0</precision>
     <precision_from_pv>true</precision_from_pv>
-    <pv_name>$(P)$(R)Data {"longString":true}</pv_name>
+    <pv_name>$(P)$(R)Data</pv_name>
     <pv_value />
     <rotation_angle>0.0</rotation_angle>
     <rules />
