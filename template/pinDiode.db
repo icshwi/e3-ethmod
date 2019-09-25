@@ -1,19 +1,24 @@
+#========================================================
+#===== Voltage monitor
 record(calc, "$(P)$(R_LTC2991)CurrMonitor") {
     field(DESC, "Current Consumption")
-    field(CALC, "(B-A)*2")
+    field(EGU, "mA")
+    field(CALC, "(A-B)*2000")
     field(INPA, "$(P)$(R_LTC2991)ValueV1_RBV CP")
     field(INPB, "$(P)$(R_LTC2991)ValueV2_RBV CP")
 }
 
-record(calc, "$(P)$(R_LTC2991)VolDigital") {
+record(calc, "$(P)$(R_LTC2991)DigVol") {
     field(DESC, "Digital Voltage")
-    field(CALC, "a*2")
+    field(EGU, "V")
+    field(CALC, "A*2")
     field(INPA, "$(P)$(R_LTC2991)ValueV5_RBV CP")
 }
 
-record(calc, "$(P)$(R_LTC2991)VolAnalog") {
+record(calc, "$(P)$(R_LTC2991)AnaVol") {
     field(DESC, "Analog Voltage")
-    field(CALC, "a*2")
+    field(EGU, "V")
+    field(CALC, "A*2")
     field(INPA, "$(P)$(R_LTC2991)ValueV6_RBV CP")
 }
 
@@ -29,16 +34,27 @@ record("*", "$(P)$(R_LTC2991)Read")
 }
 
 #========================================================
-
+#===== Temperature monitor
 record("*", "$(P)$(R_TMP100)Read")
 {
     field(SCAN, ".5 second")
 }
+record("*", "$(P)$(R_TMP100)Value_RBV")
+{
+    field(EGU, "C")
+}
+
 
 #========================================================
-
+#===== Port extender
 record("*", "$(P)$(R_TCA9555)Read")
 {
     field(SCAN, ".5 second")
 }
 
+record(bi, "$(P)$(R_TCA9555)LevelPin7_RBV") {
+    alias("$(P)SwitchStatus")
+    field(DESC, "PinDiode switch status")
+    field(ONAM, "Closed")
+    field(ZNAM, "Opened")
+}
