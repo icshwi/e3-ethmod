@@ -146,7 +146,7 @@
       <transparent>true</transparent>
       <widget type="symbol" version="2.0.0">
         <name>Symbol_1</name>
-        <pv_name>$(P)SwitchStatus</pv_name>
+        <pv_name>$(P):SwitchStatus</pv_name>
         <symbols>
           <symbol>symbols/switch_off.gif</symbol>
           <symbol>symbols/switch_on.gif</symbol>

@@ -52,7 +52,7 @@ record("*", "$(P)$(R_TCA9555)Read")
     field(SCAN, ".5 second")
 }
 
-record(bi, "$(P)SwitchStatus") {
+record(bi, "$(P):SwitchStatus") {
     field(INP, "$(P)$(R_TCA9555)LevelPin7_RBV CP")
     field(DESC, "PinDiode switch status")
     field(ONAM, "Closed")

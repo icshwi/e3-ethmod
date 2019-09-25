@@ -49,7 +49,7 @@ dbLoadRecords("AKI2C_TMP100.db",       "P=$(PREFIX),R=$(R_TMP100),PORT=$(I2C_TMP
 # AKI2CM24M02Configure(const char *portName, const char *ipPort,
 #        int devCount, const char *devInfos, int priority, int stackSize);
 AKI2CM24M02Configure($(I2C_M24M02_PORT), $(I2C_IP_PORT), 1, "0x50", 1, 0, 0)
-dbLoadRecords("AKI2C_M24M02.db",       "P=$(PREFIX),R=$(R_M24M02),PORT=$(I2C_M24M02_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1,NELM=16383")
+dbLoadRecords("AKI2C_M24M02.db",       "P=$(PREFIX),R=$(R_M24M02),PORT=$(I2C_M24M02_PORT),IP_PORT=$(I2C_IP_PORT),ADDR=0,TIMEOUT=1,NELM=16000")
 #asynSetTraceIOMask($(I2C_M24M02_PORT),0,255)
 #asynSetTraceMask($(I2C_M24M02_PORT),0,255)
 
