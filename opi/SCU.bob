@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <macros>
+    <P>MBL-010RFC:RFS-SCU-110</P>
+  </macros>
+  <width>550</width>
+  <height>700</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="group" version="2.0.0">
+    <name>Signal Conditioning Unit</name>
+    <macros>
+      <R_LTC2991>:VMon1-</R_LTC2991>
+      <R_LTC2991_2>:VMon2-</R_LTC2991_2>
+      <R_LTC2991_3>:VMon3-</R_LTC2991_3>
+      <R_M24M02>:Eeprom-</R_M24M02>
+      <R_TCA9555>:IOExp1-</R_TCA9555>
+      <R_TCA9555_2>:IOExp2-</R_TCA9555_2>
+      <R_TCA9555_3>:IOExp3-</R_TCA9555_3>
+      <R_TMP100>:Temp-</R_TMP100>
+    </macros>
+    <x>10</x>
+    <y>10</y>
+    <width>500</width>
+    <height>600</height>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>9</x>
+      <y>439</y>
+      <width>207</width>
+      <height>120</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_12</name>
+        <text>Board temperature:</text>
+        <y>8</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_1</name>
+        <pv_name>$(P)$(R_TMP100)Value_RBV</pv_name>
+        <x>147</x>
+        <y>13</y>
+        <width>60</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_13</name>
+        <text>Curr. Consumption:</text>
+        <y>35</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_9</name>
+        <pv_name>$(P)$(R_LTC2991)CurrMonitor</pv_name>
+        <x>147</x>
+        <y>38</y>
+        <width>60</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_14</name>
+        <text>Analog Voltage:</text>
+        <y>62</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_10</name>
+        <pv_name>$(P)$(R_LTC2991)AnaVol</pv_name>
+        <x>147</x>
+        <y>63</y>
+        <width>60</width>
+        <precision>2</precision>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_15</name>
+        <text>DigitalVoltage:</text>
+        <y>90</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_11</name>
+        <pv_name>$(P)$(R_LTC2991)DigVol</pv_name>
+        <x>147</x>
+        <y>90</y>
+        <width>60</width>
+        <precision>2</precision>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_16</name>
+      <text>Board temperature:</text>
+      <x>19</x>
+      <y>49</y>
+      <width>147</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)$(R_TMP100)Value_RBV</pv_name>
+      <x>166</x>
+      <y>54</y>
+      <width>60</width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Magnetron</name>
+    <x>100</x>
+    <y>780</y>
+    <width>658</width>
+    <height>535</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey03-titlebar_2</name>
+      <width>658</width>
+      <height>535</height>
+      <line_width>0</line_width>
+      <background_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </background_color>
+      <corner_width>10</corner_width>
+      <corner_height>10</corner_height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>BGGrey03-title</name>
+      <text>Magnetron</text>
+      <x>14</x>
+      <width>246</width>
+      <height>50</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD_ITALIC" size="24.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="TEXT-LIGHT" red="230" green="230" blue="230">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>BGGrey03-content-group</name>
+      <x>14</x>
+      <y>50</y>
+      <width>630</width>
+      <height>470</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>BGGrey03-background</name>
+        <width>630</width>
+        <height>470</height>
+        <line_width>0</line_width>
+        <background_color>
+          <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+          </color>
+        </background_color>
+        <corner_width>5</corner_width>
+        <corner_height>5</corner_height>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>LGGrey02</name>
+        <x>20</x>
+        <y>20</y>
+        <width>196</width>
+        <height>385</height>
+        <style>3</style>
+        <widget type="label" version="2.0.0">
+          <name>LGGrey02-title</name>
+          <text>Analog Voltage</text>
+          <width>196</width>
+          <height>40</height>
+          <font>
+            <font family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="GROUP-TEXT" red="25" green="25" blue="25">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="RED-BORDER" red="150" green="8" blue="16">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>X Set Position Caption</name>
+          <class>CAPTION</class>
+          <text>Channel 1</text>
+          <x>16</x>
+          <y>53</y>
+          <width>70</width>
+          <foreground_color use_class="true">
+            <color name="Text" red="25" green="25" blue="25">
+            </color>
+          </foreground_color>
+          <horizontal_alignment use_class="true">2</horizontal_alignment>
+          <vertical_alignment use_class="true">1</vertical_alignment>
+        </widget>
+        <widget type="textupdate" version="2.0.0">
+          <name>Text Update Template_28</name>
+          <pv_name>${Isecsub}:${magtr}:ForwdPwrR</pv_name>
+          <x>113</x>
+          <y>53</y>
+          <width>58</width>
+          <wrap_words>false</wrap_words>
+          <actions>
+          </actions>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Status</name>
+        <x>360</x>
+        <y>20</y>
+        <width>250</width>
+        <height>385</height>
+        <style>3</style>
+        <widget type="label" version="2.0.0">
+          <name>LGGrey02-title_4</name>
+          <text>Status</text>
+          <width>250</width>
+          <height>40</height>
+          <font>
+            <font family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="GROUP-TEXT" red="25" green="25" blue="25">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="RED-BORDER" red="150" green="8" blue="16">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label Template_61</name>
+          <text>Filament is heating</text>
+          <x>63</x>
+          <y>57</y>
+          <width>160</width>
+          <foreground_color>
+            <color red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205">
+            </color>
+          </background_color>
+          <vertical_alignment>1</vertical_alignment>
+          <actions>
+          </actions>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label Template_63</name>
+          <text>Filament is ready</text>
+          <x>63</x>
+          <y>112</y>
+          <width>160</width>
+          <foreground_color>
+            <color red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205">
+            </color>
+          </background_color>
+          <vertical_alignment>1</vertical_alignment>
+          <actions>
+          </actions>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label Template_64</name>
+          <text>Generator ready for MW</text>
+          <x>63</x>
+          <y>167</y>
+          <width>160</width>
+          <foreground_color>
+            <color red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205">
+            </color>
+          </background_color>
+          <vertical_alignment>1</vertical_alignment>
+          <actions>
+          </actions>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label Template_65</name>
+          <text>MW in ON</text>
+          <x>63</x>
+          <y>222</y>
+          <width>160</width>
+          <foreground_color>
+            <color red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205">
+            </color>
+          </background_color>
+          <vertical_alignment>1</vertical_alignment>
+          <actions>
+          </actions>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label Template_68</name>
+          <text>RP limit detection</text>
+          <x>63</x>
+          <y>278</y>
+          <width>160</width>
+          <foreground_color>
+            <color red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205">
+            </color>
+          </background_color>
+          <vertical_alignment>1</vertical_alignment>
+          <actions>
+          </actions>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>Label Template_69</name>
+          <text>Generator is in fault</text>
+          <x>63</x>
+          <y>334</y>
+          <width>160</width>
+          <foreground_color>
+            <color red="0" green="0" blue="0">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="IO Background" red="255" green="255" blue="205">
+            </color>
+          </background_color>
+          <vertical_alignment>1</vertical_alignment>
+          <actions>
+          </actions>
+          <border_color>
+            <color name="IO Border" red="215" green="215" blue="215">
+            </color>
+          </border_color>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_32</name>
+          <pv_name>${Isecsub}:${magtr}:Fault2.B4</pv_name>
+          <x>32</x>
+          <y>57</y>
+          <off_color>
+            <color name="LED-YELLOW-OFF" red="110" green="108" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-YELLOW-ON" red="255" green="235" blue="17">
+            </color>
+          </on_color>
+          <foreground_color>
+            <color red="192" green="192" blue="192">
+            </color>
+          </foreground_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_33</name>
+          <pv_name>${Isecsub}:${magtr}:Fault2.B5</pv_name>
+          <x>32</x>
+          <y>112</y>
+          <off_color>
+            <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+            </color>
+          </on_color>
+          <foreground_color>
+            <color red="192" green="192" blue="192">
+            </color>
+          </foreground_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_34</name>
+          <pv_name>${Isecsub}:${magtr}:Fault2.B7</pv_name>
+          <x>32</x>
+          <y>168</y>
+          <off_color>
+            <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+            </color>
+          </on_color>
+          <foreground_color>
+            <color red="192" green="192" blue="192">
+            </color>
+          </foreground_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_35</name>
+          <pv_name>${Isecsub}:${magtr}:Fault2.B6</pv_name>
+          <x>32</x>
+          <y>222</y>
+          <off_color>
+            <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+            </color>
+          </on_color>
+          <foreground_color>
+            <color red="192" green="192" blue="192">
+            </color>
+          </foreground_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_36</name>
+          <pv_name>${Isecsub}:${magtr}:Fault2.B2</pv_name>
+          <x>32</x>
+          <y>278</y>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+          <foreground_color>
+            <color red="192" green="192" blue="192">
+            </color>
+          </foreground_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+        <widget type="led" version="2.0.0">
+          <name>LED_37</name>
+          <pv_name>${Isecsub}:${magtr}:Fault2.B3</pv_name>
+          <x>32</x>
+          <y>334</y>
+          <off_color>
+            <color name="LED-RED-OFF" red="110" green="101" blue="90">
+            </color>
+          </off_color>
+          <on_color>
+            <color name="LED-RED-ON" red="255" green="60" blue="46">
+            </color>
+          </on_color>
+          <foreground_color>
+            <color red="192" green="192" blue="192">
+            </color>
+          </foreground_color>
+          <actions>
+          </actions>
+          <border_alarm_sensitive>false</border_alarm_sensitive>
+        </widget>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>Boolean Button Template_16</name>
+        <pv_name>${Isecsub}:${magtr}:Setup.B5</pv_name>
+        <bit>-1</bit>
+        <x>360</x>
+        <y>419</y>
+        <width>120</width>
+        <off_label>Filament</off_label>
+        <off_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </off_color>
+        <on_label>Filament</on_label>
+        <on_color>
+          <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+          </color>
+        </on_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>Boolean Button Template_17</name>
+        <pv_name>${Isecsub}:${magtr}:Setup.B6</pv_name>
+        <bit>-1</bit>
+        <x>490</x>
+        <y>419</y>
+        <width>120</width>
+        <off_label>Magnetron</off_label>
+        <off_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </off_color>
+        <on_label>Magnetron</on_label>
+        <on_color>
+          <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+          </color>
+        </on_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_4</name>
+      <actions>
+        <action type="open_display">
+          <file>Eng OPIs/Menu.opi</file>
+          <target>standalone</target>
+          <description>Expert</description>
+        </action>
+      </actions>
+      <x>560</x>
+      <y>10</y>
+      <width>80</width>
+      <height>29</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="open_display">
+        <file>Eng OPIs/Menu.opi</file>
+        <target>standalone</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>...</text>
+    <x>697</x>
+    <y>640</y>
+    <width>34</width>
+    <height>23</height>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Display</name>
+  <width>200</width>
+  <height>30</height>
+  <widget type="group" version="2.0.0">
+    <name>Group</name>
+    <x>1</x>
+    <y>1</y>
+    <width>139</width>
+    <height>28</height>
+    <style>3</style>
+    <widget type="label" version="2.0.0">
+      <name>X Set Position Caption</name>
+      <class>CAPTION</class>
+      <text>${N}</text>
+      <x>5</x>
+      <y>4</y>
+      <width>37</width>
+      <foreground_color use_class="true">
+        <color name="Text" red="25" green="25" blue="25">
+        </color>
+      </foreground_color>
+      <horizontal_alignment use_class="true">2</horizontal_alignment>
+      <vertical_alignment use_class="true">1</vertical_alignment>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update Template_28</name>
+      <pv_name>$(P):AI$(N)-VMon</pv_name>
+      <x>73</x>
+      <y>4</y>
+      <width>58</width>
+      <wrap_words>false</wrap_words>
+      <actions>
+      </actions>
+    </widget>
+  </widget>
+</display>

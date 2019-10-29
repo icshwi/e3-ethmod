@@ -557,7 +557,7 @@ $(pv_value)</tooltip>
         <path>TMP100.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:Temp2:</R>
+          <R>$(R_TMP100_2)</R>
         </macros>
         <mode>3</mode>
         <description>Temp2</description>
@@ -613,7 +613,7 @@ $(pv_value)</tooltip>
         <path>TMP100.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:Temp3:</R>
+          <R>$(R_TMP100_3)</R>
         </macros>
         <mode>3</mode>
         <description>Temp3</description>
@@ -669,7 +669,7 @@ $(pv_value)</tooltip>
         <path>TMP100.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:Temp4:</R>
+          <R>$(R_TMP100_4)</R>
         </macros>
         <mode>3</mode>
         <description>Temp4</description>
@@ -725,7 +725,7 @@ $(pv_value)</tooltip>
         <path>TMP100.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:Temp5:</R>
+          <R>$(R_TMP100_5)</R>
         </macros>
         <mode>3</mode>
         <description>Temp5</description>
@@ -781,7 +781,7 @@ $(pv_value)</tooltip>
         <path>TMP100.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:Temp6:</R>
+          <R>$(R_TMP100_6)</R>
         </macros>
         <mode>3</mode>
         <description>Temp6</description>
@@ -837,7 +837,7 @@ $(pv_value)</tooltip>
         <path>TMP100.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:Temp7:</R>
+          <R>$(R_TMP100_7)</R>
         </macros>
         <mode>3</mode>
         <description>Temp7</description>
@@ -893,7 +893,7 @@ $(pv_value)</tooltip>
         <path>TMP100.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:Temp8:</R>
+          <R>$(R_TMP100_8)</R>
         </macros>
         <mode>3</mode>
         <description>Temp8</description>
@@ -1044,7 +1044,7 @@ $(pv_value)</tooltip>
         <path>TCA9555.opi</path>
         <macros>
           <include_parent_macros>true</include_parent_macros>
-          <R>I2C1:IOExp2:</R>
+          <R>$(R_TCA9555_2)</R>
         </macros>
         <mode>3</mode>
         <description>TCA9555</description>
@@ -1189,5 +1189,173 @@ $(pv_value)</tooltip>
     <wuid>-797a8b90:161d7c2fd18:-7f64</wuid>
     <x>36</x>
     <y>806</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>LTC2991.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <R>$(R_LTC2991_2)</R>
+        </macros>
+        <mode>3</mode>
+        <description>LTC2991</description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>40</height>
+    <image></image>
+    <name>Action Button_16</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>0</style>
+    <text>$(actions)</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>109</width>
+    <wuid>-317729d8:16e121a6cac:-7e3c</wuid>
+    <x>156</x>
+    <y>240</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>LTC2991.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <R>$(R_LTC2991_3)</R>
+        </macros>
+        <mode>3</mode>
+        <description>LTC2991</description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>40</height>
+    <image></image>
+    <name>Action Button_17</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>0</style>
+    <text>$(actions)</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>109</width>
+    <wuid>-317729d8:16e121a6cac:-7e37</wuid>
+    <x>276</x>
+    <y>240</y>
+  </widget>
+  <widget typeId="org.csstudio.opibuilder.widgets.ActionButton" version="2.0.0">
+    <actions hook="false" hook_all="false">
+      <action type="OPEN_DISPLAY">
+        <path>TCA9555.opi</path>
+        <macros>
+          <include_parent_macros>true</include_parent_macros>
+          <R>$(R_TCA9555_3)</R>
+        </macros>
+        <mode>3</mode>
+        <description>TCA9555</description>
+      </action>
+    </actions>
+    <alarm_pulsing>false</alarm_pulsing>
+    <backcolor_alarm_sensitive>false</backcolor_alarm_sensitive>
+    <background_color>
+      <color red="240" green="240" blue="240" />
+    </background_color>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <border_color>
+      <color red="0" green="128" blue="255" />
+    </border_color>
+    <border_style>0</border_style>
+    <border_width>1</border_width>
+    <enabled>true</enabled>
+    <font>
+      <opifont.name fontName="Segoe UI" height="9" style="0" pixels="false">Default</opifont.name>
+    </font>
+    <forecolor_alarm_sensitive>false</forecolor_alarm_sensitive>
+    <foreground_color>
+      <color red="0" green="0" blue="0" />
+    </foreground_color>
+    <height>40</height>
+    <image></image>
+    <name>Action Button_18</name>
+    <push_action_index>0</push_action_index>
+    <pv_name></pv_name>
+    <pv_value />
+    <rules />
+    <scale_options>
+      <width_scalable>true</width_scalable>
+      <height_scalable>true</height_scalable>
+      <keep_wh_ratio>false</keep_wh_ratio>
+    </scale_options>
+    <scripts />
+    <style>0</style>
+    <text>$(actions)</text>
+    <toggle_button>false</toggle_button>
+    <tooltip>$(pv_name)
+$(pv_value)</tooltip>
+    <visible>true</visible>
+    <widget_type>Action Button</widget_type>
+    <width>109</width>
+    <wuid>-317729d8:16e121a6cac:-7d31</wuid>
+    <x>276</x>
+    <y>350</y>
   </widget>
 </display>

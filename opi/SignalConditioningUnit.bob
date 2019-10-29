@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <macros>
+    <P>TS2-010RFC:RFS-SCU-110</P>
+  </macros>
+  <width>550</width>
+  <height>700</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="group" version="2.0.0">
+    <name>Signal Conditioning Unit</name>
+    <macros>
+      <R_LTC2991>:VMon1-</R_LTC2991>
+      <R_LTC2991_2>:VMon2-</R_LTC2991_2>
+      <R_LTC2991_3>:VMon3-</R_LTC2991_3>
+      <R_M24M02>:Eeprom-</R_M24M02>
+      <R_TCA9555>:IOExp1-</R_TCA9555>
+      <R_TCA9555_2>:IOExp2-</R_TCA9555_2>
+      <R_TCA9555_3>:IOExp3-</R_TCA9555_3>
+      <R_TMP100>:Temp-</R_TMP100>
+    </macros>
+    <x>10</x>
+    <y>10</y>
+    <width>500</width>
+    <height>600</height>
+    <widget type="group" version="2.0.0">
+      <name>Group</name>
+      <x>9</x>
+      <y>439</y>
+      <width>207</width>
+      <height>120</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="label" version="2.0.0">
+        <name>Label_12</name>
+        <text>Board temperature:</text>
+        <y>8</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_1</name>
+        <pv_name>$(P)$(R_TMP100)Value_RBV</pv_name>
+        <x>147</x>
+        <y>13</y>
+        <width>60</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_13</name>
+        <text>Curr. Consumption:</text>
+        <y>35</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_9</name>
+        <pv_name>$(P)$(R_LTC2991)CurrMonitor</pv_name>
+        <x>147</x>
+        <y>38</y>
+        <width>60</width>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_14</name>
+        <text>Analog Voltage:</text>
+        <y>62</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_10</name>
+        <pv_name>$(P)$(R_LTC2991)AnaVol</pv_name>
+        <x>147</x>
+        <y>63</y>
+        <width>60</width>
+        <precision>2</precision>
+      </widget>
+      <widget type="label" version="2.0.0">
+        <name>Label_15</name>
+        <text>DigitalVoltage:</text>
+        <y>90</y>
+        <width>147</width>
+        <height>30</height>
+      </widget>
+      <widget type="textupdate" version="2.0.0">
+        <name>Text Update_11</name>
+        <pv_name>$(P)$(R_LTC2991)DigVol</pv_name>
+        <x>147</x>
+        <y>90</y>
+        <width>60</width>
+        <precision>2</precision>
+      </widget>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_16</name>
+      <text>Board temperature:</text>
+      <x>19</x>
+      <y>49</y>
+      <width>147</width>
+      <height>30</height>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_2</name>
+      <pv_name>$(P)$(R_TMP100)Value_RBV</pv_name>
+      <x>166</x>
+      <y>54</y>
+      <width>60</width>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>Magnetron</name>
+    <macros>
+      <R_LTC2991>:VMon1-</R_LTC2991>
+      <R_LTC2991_2>:VMon2-</R_LTC2991_2>
+      <R_LTC2991_3>:VMon3-</R_LTC2991_3>
+      <R_M24M02>:Eeprom-</R_M24M02>
+      <R_TCA9555>:IOExp1-</R_TCA9555>
+      <R_TCA9555_2>:IOExp2-</R_TCA9555_2>
+      <R_TCA9555_3>:IOExp3-</R_TCA9555_3>
+      <R_TMP100>:Temp-</R_TMP100>
+    </macros>
+    <x>550</x>
+    <y>10</y>
+    <width>658</width>
+    <height>690</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey03-titlebar_2</name>
+      <width>658</width>
+      <height>690</height>
+      <line_width>0</line_width>
+      <background_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </background_color>
+      <corner_width>10</corner_width>
+      <corner_height>10</corner_height>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>BGGrey03-title</name>
+      <text>Magnetron</text>
+      <x>14</x>
+      <width>246</width>
+      <height>50</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD_ITALIC" size="24.0">
+        </font>
+      </font>
+      <foreground_color>
+        <color name="TEXT-LIGHT" red="230" green="230" blue="230">
+        </color>
+      </foreground_color>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="group" version="2.0.0">
+      <name>BGGrey03-content-group</name>
+      <x>14</x>
+      <y>50</y>
+      <width>630</width>
+      <height>630</height>
+      <style>3</style>
+      <transparent>true</transparent>
+      <widget type="rectangle" version="2.0.0">
+        <name>BGGrey03-background</name>
+        <width>630</width>
+        <height>630</height>
+        <line_width>0</line_width>
+        <background_color>
+          <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+          </color>
+        </background_color>
+        <corner_width>5</corner_width>
+        <corner_height>5</corner_height>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>LGGrey02</name>
+        <x>20</x>
+        <y>20</y>
+        <width>246</width>
+        <height>600</height>
+        <style>3</style>
+        <widget type="label" version="2.0.0">
+          <name>LGGrey02-title</name>
+          <text>Analog Voltage</text>
+          <width>246</width>
+          <height>40</height>
+          <font>
+            <font family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="GROUP-TEXT" red="25" green="25" blue="25">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="RED-BORDER" red="150" green="8" blue="16">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>1</N>
+          </macros>
+          <y>95</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_1</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>2</N>
+          </macros>
+          <y>125</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_2</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>3</N>
+          </macros>
+          <y>155</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_3</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>4</N>
+          </macros>
+          <y>185</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_4</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>5</N>
+          </macros>
+          <y>215</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_5</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>6</N>
+          </macros>
+          <y>245</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_6</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>7</N>
+          </macros>
+          <y>275</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_7</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>8</N>
+          </macros>
+          <y>305</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_8</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>9</N>
+          </macros>
+          <y>335</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_9</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>10</N>
+          </macros>
+          <y>365</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="embedded" version="2.0.0">
+          <name>Embedded Display_10</name>
+          <file>SCU_AI.bob</file>
+          <macros>
+            <N>4</N>
+          </macros>
+          <y>395</y>
+          <width>200</width>
+          <height>30</height>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>LGGrey02-title_1</name>
+          <text>Channel</text>
+          <x>4</x>
+          <y>60</y>
+          <width>66</width>
+          <height>35</height>
+          <font>
+            <font family="Source Sans Pro" style="BOLD" size="14.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="GROUP-TEXT" red="25" green="25" blue="25">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="RED-BORDER" red="150" green="8" blue="16">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+        </widget>
+        <widget type="label" version="2.0.0">
+          <name>LGGrey02-title_2</name>
+          <text>Value</text>
+          <x>72</x>
+          <y>60</y>
+          <width>67</width>
+          <height>35</height>
+          <font>
+            <font family="Source Sans Pro" style="BOLD" size="14.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="GROUP-TEXT" red="25" green="25" blue="25">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="RED-BORDER" red="150" green="8" blue="16">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+        </widget>
+      </widget>
+      <widget type="group" version="2.0.0">
+        <name>Status</name>
+        <x>360</x>
+        <y>20</y>
+        <width>250</width>
+        <height>385</height>
+        <style>3</style>
+        <widget type="label" version="2.0.0">
+          <name>LGGrey02-title_4</name>
+          <text>Status</text>
+          <width>250</width>
+          <height>40</height>
+          <font>
+            <font family="Source Sans Pro" style="BOLD_ITALIC" size="18.0">
+            </font>
+          </font>
+          <foreground_color>
+            <color name="GROUP-TEXT" red="25" green="25" blue="25">
+            </color>
+          </foreground_color>
+          <background_color>
+            <color name="RED-BORDER" red="150" green="8" blue="16">
+            </color>
+          </background_color>
+          <horizontal_alignment>1</horizontal_alignment>
+          <vertical_alignment>1</vertical_alignment>
+          <wrap_words>false</wrap_words>
+        </widget>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>Boolean Button Template_16</name>
+        <pv_name>${Isecsub}:${magtr}:Setup.B5</pv_name>
+        <bit>-1</bit>
+        <x>360</x>
+        <y>419</y>
+        <width>120</width>
+        <off_label>Filament</off_label>
+        <off_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </off_color>
+        <on_label>Filament</on_label>
+        <on_color>
+          <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+          </color>
+        </on_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+      <widget type="bool_button" version="2.0.0">
+        <name>Boolean Button Template_17</name>
+        <pv_name>${Isecsub}:${magtr}:Setup.B6</pv_name>
+        <bit>-1</bit>
+        <x>490</x>
+        <y>419</y>
+        <width>120</width>
+        <off_label>Magnetron</off_label>
+        <off_color>
+          <color name="LED-GREEN-OFF" red="90" green="110" blue="90">
+          </color>
+        </off_color>
+        <on_label>Magnetron</on_label>
+        <on_color>
+          <color name="LED-GREEN-ON" red="70" green="255" blue="70">
+          </color>
+        </on_color>
+        <actions>
+        </actions>
+        <border_alarm_sensitive>false</border_alarm_sensitive>
+      </widget>
+    </widget>
+    <widget type="action_button" version="3.0.0">
+      <name>Action Button_4</name>
+      <actions>
+        <action type="open_display">
+          <file>Eng OPIs/Menu.opi</file>
+          <target>standalone</target>
+          <description>Expert</description>
+        </action>
+      </actions>
+      <x>560</x>
+      <y>10</y>
+      <width>80</width>
+      <height>29</height>
+      <tooltip>$(actions)</tooltip>
+    </widget>
+  </widget>
+</display>

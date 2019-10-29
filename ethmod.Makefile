@@ -203,8 +203,10 @@ SCRIPTS += $(wildcard ../iocsh/*.iocsh)
 USR_DBFLAGS += -I . -I ..
 USR_DBFLAGS += -I $(EPICS_BASE)/db
 USR_DBFLAGS += -I $(APPDB)
+USR_DBFLAGS += -I ../template
 
 SUBS=$(wildcard $(APPDB)/*.substitutions)
+SUBS += $(wildcard ../template/*.substitutions)
 TMPS=$(wildcard $(APPDB)/*.template)
 
 # db: $(SUBS) $(TMPS)

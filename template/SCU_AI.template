@@ -1,0 +1,5 @@
+record("*", "$(P)$(R_LTC2991)ValueV$(PIN_IDX)_RBV") {
+    alias("$(P):AI$(AIO_IDX)-VMon")
+    field(DESC, "Analog Voltage Monitoring")
+    field(EGU, "V")
+}

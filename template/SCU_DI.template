@@ -1,0 +1,13 @@
+# record(bi, "$(P):DI$(DIO_IDX)-5V") {
+#     field(DESC, "Input 5V monitoring")
+#     field(INP, "$(P)$(R_TCA9555)LevelPin$(PIN_IDX)_RBV CP")
+#     field(ONAM, "ON")
+#     field(ZNAM, "OFF")
+# }
+
+record("*", "$(P)$(R_TCA9555)LevelPin$(PIN_IDX)_RBV") {
+    alias("$(P):DI$(DIO_IDX)-5V")
+    field(DESC, "Input 5V monitoring")
+    field(ONAM, "ON")
+    field(ZNAM, "OFF")
+}

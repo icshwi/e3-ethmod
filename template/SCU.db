@@ -1,0 +1,65 @@
+#========================================================
+#===== Voltage monitor
+record("*", "$(P)$(R_LTC2991_1)Trigger")
+{
+    field(SCAN, ".5 second")
+}
+record("*", "$(P)$(R_LTC2991_1)Read")
+{
+    field(SCAN, ".5 second")
+}
+record("*", "$(P)$(R_LTC2991_2)Trigger")
+{
+    field(SCAN, ".5 second")
+}
+record("*", "$(P)$(R_LTC2991_2)Read")
+{
+    field(SCAN, ".5 second")
+}
+# record("*", "$(P)$(R_LTC2991_3)Trigger")
+# {
+#     field(SCAN, ".5 second")
+# }
+# record("*", "$(P)$(R_LTC2991_3)Read")
+# {
+#     field(SCAN, ".5 second")
+# }
+
+#========================================================
+#===== Temperature monitor
+record("*", "$(P)$(R_TMP100)Read")
+{
+    field(SCAN, "2 second")
+}
+record("*", "$(P)$(R_TMP100)Value_RBV")
+{
+    field(EGU, "C")
+}
+
+#========================================================
+#===== Port extender
+record("*", "$(P)$(R_TCA9555_1)Read")
+{
+    field(SCAN, ".5 second")
+}
+record("*", "$(P)$(R_TCA9555_2)Read")
+{
+    field(SCAN, ".5 second")
+}
+record("*", "$(P)$(R_TCA9555_3)Read")
+{
+    field(SCAN, ".5 second")
+}
+
+record("*", "$(P)$(R_TCA9555_1)LevelPin0") {
+    alias("$(P):DO0-Test")
+    field(DESC, "Test output")
+}
+record("*", "$(P)$(R_TCA9555_3)LevelPin0") {
+    alias("$(P):DO1-Test")
+    field(DESC, "Test output")
+}
+record("*", "$(P)$(R_TCA9555_3)LevelPin0") {
+    alias("$(P):DO3-Test")
+    field(DESC, "Test output")
+}
