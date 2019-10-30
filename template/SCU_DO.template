@@ -6,4 +6,5 @@
 record("*", "$(P)$(R_TCA9555)LevelPin$(PIN_IDX)") {
     alias("$(P):DO$(DIO_IDX)-Reset")
     field(DESC, "Reset")
+    field(HIGH, "0.5")
 }
