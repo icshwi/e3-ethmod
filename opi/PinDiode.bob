@@ -58,7 +58,7 @@
       <actions>
         <action type="open_display">
           <file>Eng OPIs/Menu.opi</file>
-          <target>standalone</target>
+          <target>tab</target>
           <description>Open Display</description>
         </action>
       </actions>

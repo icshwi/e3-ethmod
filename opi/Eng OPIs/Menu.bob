@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <width>1600</width>
+  <height>1000</height>
+  <background_color>
+    <color red="240" green="240" blue="240">
+    </color>
+  </background_color>
+  <actions>
+  </actions>
+  <widget type="label" version="2.0.0">
+    <name>Label_7</name>
+    <text>Digital Rheostat</text>
+    <x>18</x>
+    <y>546</y>
+    <width>499</width>
+    <height>103</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>EEPROM</text>
+    <x>18</x>
+    <y>432</y>
+    <width>499</width>
+    <height>103</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Port Expander</text>
+    <x>18</x>
+    <y>318</y>
+    <width>499</width>
+    <height>103</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Voltage Monitoring</text>
+    <x>18</x>
+    <y>204</y>
+    <width>499</width>
+    <height>103</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>Temperature Monitoring</text>
+    <x>18</x>
+    <y>48</y>
+    <width>499</width>
+    <height>145</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Ethernet Module</text>
+    <x>18</x>
+    <y>6</y>
+    <width>499</width>
+    <height>31</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp1</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>84</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="open_display">
+        <file>TCA9555.opi</file>
+        <macros>
+          <R>$(R_TCA9555)</R>
+        </macros>
+        <target>tab</target>
+        <description>TCA9555</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>350</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_3</name>
+    <actions>
+      <action type="open_display">
+        <file>LTC2991.opi</file>
+        <macros>
+          <R>$(R_LTC2991)</R>
+        </macros>
+        <target>tab</target>
+        <description>LTC2991</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>240</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_4</name>
+    <actions>
+      <action type="open_display">
+        <file>M24M02.opi</file>
+        <macros>
+          <R>$(R_M24M02)</R>
+        </macros>
+        <target>tab</target>
+        <description>M24M02</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>464</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_5</name>
+    <actions>
+      <action type="open_display">
+        <file>AD527x.opi</file>
+        <target>tab</target>
+        <description>AD527x</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>578</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_6</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100_2)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp2</description>
+      </action>
+    </actions>
+    <x>156</x>
+    <y>84</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_7</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100_3)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp3</description>
+      </action>
+    </actions>
+    <x>276</x>
+    <y>84</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_8</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100_4)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp4</description>
+      </action>
+    </actions>
+    <x>396</x>
+    <y>84</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_9</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100_5)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp5</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>132</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_10</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100_6)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp6</description>
+      </action>
+    </actions>
+    <x>156</x>
+    <y>132</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_11</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100_7)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp7</description>
+      </action>
+    </actions>
+    <x>276</x>
+    <y>132</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_12</name>
+    <actions>
+      <action type="open_display">
+        <file>TMP100.opi</file>
+        <macros>
+          <R>$(R_TMP100_8)</R>
+        </macros>
+        <target>tab</target>
+        <description>Temp8</description>
+      </action>
+    </actions>
+    <x>396</x>
+    <y>132</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>Serial number</text>
+    <x>18</x>
+    <y>660</y>
+    <width>499</width>
+    <height>103</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_13</name>
+    <actions>
+      <action type="open_display">
+        <file>DS28CM00.opi</file>
+        <target>tab</target>
+        <description>DS28CM00</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>692</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_14</name>
+    <actions>
+      <action type="open_display">
+        <file>TCA9555.opi</file>
+        <macros>
+          <R>$(R_TCA9555_2)</R>
+        </macros>
+        <target>tab</target>
+        <description>TCA9555</description>
+      </action>
+    </actions>
+    <x>156</x>
+    <y>350</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_11</name>
+    <text>TTL IO (on Pico XT)</text>
+    <x>18</x>
+    <y>774</y>
+    <width>499</width>
+    <height>103</height>
+    <font>
+      <font name="Header 2" family="Source Sans Pro" style="BOLD_ITALIC" size="21.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <transparent>false</transparent>
+    <horizontal_alignment>1</horizontal_alignment>
+    <wrap_words>false</wrap_words>
+    <actions>
+    </actions>
+    <border_color>
+      <color red="0" green="128" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_15</name>
+    <actions>
+      <action type="open_display">
+        <file>TTLIO.opi</file>
+        <macros>
+          <R>TTLIO:</R>
+        </macros>
+        <target>tab</target>
+        <description>TTL IO</description>
+      </action>
+    </actions>
+    <x>36</x>
+    <y>806</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_16</name>
+    <actions>
+      <action type="open_display">
+        <file>LTC2991.opi</file>
+        <macros>
+          <R>$(R_LTC2991_2)</R>
+        </macros>
+        <target>tab</target>
+        <description>LTC2991</description>
+      </action>
+    </actions>
+    <x>156</x>
+    <y>240</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_17</name>
+    <actions>
+      <action type="open_display">
+        <file>LTC2991.opi</file>
+        <macros>
+          <R>$(R_LTC2991_3)</R>
+        </macros>
+        <target>tab</target>
+        <description>LTC2991</description>
+      </action>
+    </actions>
+    <x>276</x>
+    <y>240</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_18</name>
+    <actions>
+      <action type="open_display">
+        <file>TCA9555.opi</file>
+        <macros>
+          <R>$(R_TCA9555_3)</R>
+        </macros>
+        <target>tab</target>
+        <description>TCA9555</description>
+      </action>
+    </actions>
+    <x>276</x>
+    <y>350</y>
+    <width>109</width>
+    <height>40</height>
+    <foreground_color>
+      <color red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

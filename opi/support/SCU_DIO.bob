@@ -4,63 +4,39 @@
   <macros>
     <R>DI$(ch_index)-5V</R>
   </macros>
-  <width>540</width>
-  <height>23</height>
-  <widget type="rectangle" version="2.0.0">
-    <name>Rectangle</name>
-    <width>540</width>
-    <height>23</height>
-    <line_width>1</line_width>
-    <line_color>
-      <color name="BLUE-GROUP-BORDER" red="138" green="167" blue="167">
-      </color>
-    </line_color>
-    <background_color>
-      <color name="Background" red="220" green="225" blue="221">
-      </color>
-    </background_color>
-    <transparent>true</transparent>
-  </widget>
+  <width>630</width>
+  <height>35</height>
   <widget type="textupdate" version="2.0.0">
-    <name>Text Update_4</name>
+    <name>Text Update_5</name>
     <pv_name>$(P):$(R).DESC</pv_name>
-    <x>240</x>
-    <y>1</y>
-    <width>190</width>
-    <font>
-      <font family="Source Sans Pro" style="REGULAR" size="12.0">
-      </font>
-    </font>
+    <x>290</x>
+    <y>7</y>
+    <width>234</width>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
     <border_alarm_sensitive>false</border_alarm_sensitive>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_9</name>
+    <name>Label_11</name>
     <text>$(P):$(R)</text>
-    <x>53</x>
-    <y>1</y>
-    <width>177</width>
-    <font>
-      <font family="Source Sans Pro" style="REGULAR" size="12.0">
-      </font>
-    </font>
+    <x>50</x>
+    <y>7</y>
+    <width>200</width>
     <vertical_alignment>1</vertical_alignment>
   </widget>
   <widget type="label" version="2.0.0">
-    <name>Label_10</name>
-    <text>DIO$(ch_index)</text>
-    <x>4</x>
-    <y>1</y>
-    <width>49</width>
+    <name>Label_12</name>
+    <text>DI$(ch_index)</text>
+    <y>7</y>
+    <width>40</width>
     <font>
-      <font family="Source Sans Pro" style="BOLD" size="12.0">
+      <font family="Source Sans Pro" style="BOLD" size="16.0">
       </font>
     </font>
     <vertical_alignment>1</vertical_alignment>
   </widget>
   <widget type="action_button" version="3.0.0">
-    <name>Action Button_9</name>
+    <name>Action Button_10</name>
     <actions>
       <action type="write_pv">
         <pv_name>$(pv_name)</pv_name>
@@ -70,10 +46,10 @@
     </actions>
     <pv_name>$(P):DO$(ch_index)-Reset</pv_name>
     <text>Reset</text>
-    <x>470</x>
-    <y>3</y>
+    <x>570</x>
+    <y>7</y>
     <width>50</width>
-    <height>17</height>
+    <height>20</height>
     <font>
       <font family="Source Sans Pro" style="REGULAR" size="14.0">
       </font>
@@ -81,10 +57,10 @@
     <tooltip>$(actions)</tooltip>
   </widget>
   <widget type="led" version="2.0.0">
-    <name>LED_4</name>
+    <name>LED_5</name>
     <pv_name>$(P):$(R)</pv_name>
-    <x>440</x>
-    <y>1</y>
+    <x>540</x>
+    <y>7</y>
     <off_color>
       <color name="RED" red="252" green="13" blue="27">
       </color>
