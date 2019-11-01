@@ -55,7 +55,7 @@
     <name>Action Button_2</name>
     <actions>
       <action type="open_display">
-        <file>Eng OPIs/Menu.bob</file>
+        <file>xt-pico_Eng/Menu.bob</file>
         <target>tab</target>
         <description>Open Display</description>
       </action>
@@ -164,7 +164,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_1</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>1</ch_index>
       </macros>
@@ -181,7 +181,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_2</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>2</ch_index>
       </macros>
@@ -198,7 +198,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_4</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>3</ch_index>
       </macros>
@@ -215,7 +215,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_5</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>4</ch_index>
       </macros>
@@ -232,7 +232,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_6</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>5</ch_index>
       </macros>
@@ -249,7 +249,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_7</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>6</ch_index>
       </macros>
@@ -266,7 +266,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_8</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>7</ch_index>
       </macros>
@@ -283,7 +283,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_9</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>8</ch_index>
       </macros>
@@ -300,7 +300,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_12</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>9</ch_index>
       </macros>
@@ -317,7 +317,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_13</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>10</ch_index>
       </macros>
@@ -334,7 +334,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_14</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>11</ch_index>
       </macros>
@@ -351,7 +351,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_15</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>12</ch_index>
       </macros>
@@ -368,7 +368,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_16</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>14</ch_index>
       </macros>
@@ -385,7 +385,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_17</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>15</ch_index>
       </macros>
@@ -402,7 +402,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_18</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>16</ch_index>
       </macros>
@@ -419,7 +419,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_19</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>17</ch_index>
       </macros>
@@ -436,7 +436,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_20</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>18</ch_index>
       </macros>
@@ -453,7 +453,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_21</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>19</ch_index>
       </macros>
@@ -470,7 +470,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_39</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>13</ch_index>
       </macros>
@@ -487,7 +487,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_41</name>
-      <file>support/SCU_AI.bob</file>
+      <file>SCUAISignal.bob</file>
       <macros>
         <ch_index>20</ch_index>
       </macros>
@@ -601,7 +601,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_42</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>1</ch_index>
       </macros>
@@ -618,7 +618,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_43</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>2</ch_index>
       </macros>
@@ -635,7 +635,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_44</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>3</ch_index>
       </macros>
@@ -652,7 +652,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_45</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>4</ch_index>
       </macros>
@@ -669,7 +669,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_46</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>5</ch_index>
       </macros>
@@ -686,7 +686,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_47</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>6</ch_index>
       </macros>
@@ -703,7 +703,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_48</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>7</ch_index>
       </macros>
@@ -720,7 +720,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_49</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>8</ch_index>
       </macros>
@@ -737,7 +737,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_50</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>9</ch_index>
       </macros>
@@ -754,7 +754,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_51</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>10</ch_index>
       </macros>
@@ -771,7 +771,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_52</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>11</ch_index>
       </macros>
@@ -788,7 +788,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_53</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>12</ch_index>
       </macros>
@@ -805,7 +805,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_54</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>14</ch_index>
       </macros>
@@ -822,7 +822,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_55</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>15</ch_index>
       </macros>
@@ -839,7 +839,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_56</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>16</ch_index>
       </macros>
@@ -856,7 +856,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_57</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>17</ch_index>
       </macros>
@@ -873,7 +873,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_58</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>18</ch_index>
       </macros>
@@ -890,7 +890,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_59</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>19</ch_index>
       </macros>
@@ -907,7 +907,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_60</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>13</ch_index>
       </macros>
@@ -924,7 +924,7 @@
     </widget>
     <widget type="embedded" version="2.0.0">
       <name>Embedded Display_61</name>
-      <file>support/SCU_DIO.bob</file>
+      <file>SCUDIOSignal.bob</file>
       <macros>
         <ch_index>20</ch_index>
       </macros>

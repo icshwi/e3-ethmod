@@ -57,7 +57,7 @@
       <name>Action Button_2</name>
       <actions>
         <action type="open_display">
-          <file>Eng OPIs/Menu.opi</file>
+          <file>xt-pico_Eng/Menu.bob</file>
           <target>tab</target>
           <description>Open Display</description>
         </action>

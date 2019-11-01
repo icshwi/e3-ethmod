@@ -9,9 +9,9 @@
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_4</name>
     <pv_name>$(P):$(R).DESC</pv_name>
-    <x>290</x>
+    <x>310</x>
     <y>7</y>
-    <width>234</width>
+    <width>214</width>
     <transparent>true</transparent>
     <vertical_alignment>1</vertical_alignment>
     <border_alarm_sensitive>false</border_alarm_sensitive>
@@ -21,7 +21,7 @@
     <text>$(P):$(R)</text>
     <x>50</x>
     <y>7</y>
-    <width>200</width>
+    <width>250</width>
     <vertical_alignment>1</vertical_alignment>
   </widget>
   <widget type="textupdate" version="2.0.0">
