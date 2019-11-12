@@ -1,4 +1,4 @@
 [submodule "ethmod"]
 	path = ethmod
-	url = git@gitlab.esss.lu.se:beam-diagnostics/bde/epics/modules/ethmod.git
+	url = https://gitlab.esss.lu.se/beam-diagnostics/bde/epics/modules/ethmod.git
 	ignore = all
