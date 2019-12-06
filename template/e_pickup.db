@@ -1,0 +1,74 @@
+#========================================================
+#===== Voltage monitor
+record(calc, "$(P)$(R_LTC2991)CurrMonitor") {
+    field(DESC, "Current Consumption")
+    field(EGU, "mA")
+    field(CALC, "(A-B)*2000")
+    field(INPA, "$(P)$(R_LTC2991)ValueV1_RBV CP")
+    field(INPB, "$(P)$(R_LTC2991)ValueV2_RBV CP")
+}
+
+record("*", "$(P)$(R_LTC2991)ValueV5_RBV") {
+    field(DESC, "Analog voltage 5V")
+    alias("$(P)$(R_LTC2991)AnaVol5V")
+}
+
+record("*", "$(P)$(R_LTC2991)ValueV6_RBV") {
+    field(DESC, "Analog voltage current pickup")
+    alias("$(P)$(R_LTC2991)AnaVolCurr")
+}
+
+record("*", "$(P)$(R_LTC2991)Trigger")
+{
+    field(SCAN, ".5 second")
+}
+
+record("*", "$(P)$(R_LTC2991)Read")
+{
+    field(SCAN, ".5 second")
+}
+
+#========================================================
+#===== Temperature monitor
+record("*", "$(P)$(R_TMP100)Read")
+{
+    field(SCAN, ".5 second")
+}
+record("*", "$(P)$(R_TMP100)Value_RBV")
+{
+    field(EGU, "C")
+}
+
+#========================================================
+#===== Port extender
+record("*", "$(P)$(R_TCA9555)Read")
+{
+    field(SCAN, ".5 second")
+}
+
+record("*", "$(P)$(R_TCA9555)LevelPin7") {
+    field(DESC, "Test LED on e_pickup")
+    alias("$(P)$(R_TCA9555)test_RBV")
+}
+
+record("*", "$(P)$(R_TCA9555)LevelPin0_RBV") {
+    field(DESC, "Test button on e_pickup")
+    alias("$(P)$(R_TCA9555)test")
+}
+
+record("*", "$(P)$(R_TCA9555)LevelPin1_RBV") {
+    field(DESC, "Interlock OFF")
+    alias("$(P)$(R_TCA9555)IntlkON")
+}
+
+record("*", "$(P)$(R_TCA9555)LevelPin2_RBV") {
+    field(DESC, "Interlock ON")
+    alias("$(P)$(R_TCA9555)IntlkOFF")
+}
+
+#========================================================
+#===== Rheostat
+record("*", "$(P)$(R_AD527X)Read")
+{
+    field(SCAN, ".5 second")
+}
