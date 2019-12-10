@@ -292,6 +292,9 @@
     <actions>
       <action type="open_display">
         <file>AD527x.opi</file>
+        <macros>
+          <R>$(R_AD527X)</R>
+        </macros>
         <target>tab</target>
         <description>AD527x</description>
       </action>

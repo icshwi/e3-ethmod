@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<display version="2.0.0">
+  <name>Electron Pickup</name>
+  <macros>
+    <P>LAB-010CRM:RFS-ED-010</P>
+    <R_AD527X>:Res1-</R_AD527X>
+    <R_LTC2991>:VMon1-</R_LTC2991>
+    <R_M24M02>:Eeprom1-</R_M24M02>
+    <R_TCA9555>:IOExp1-</R_TCA9555>
+    <R_TMP100>:Temp1-</R_TMP100>
+  </macros>
+  <width>970</width>
+  <height>470</height>
+  <widget type="rectangle" version="2.0.0">
+    <name>Rectangle_1</name>
+    <class>TITLE-BAR</class>
+    <x use_class="true">0</x>
+    <y use_class="true">0</y>
+    <width>970</width>
+    <height use_class="true">50</height>
+    <line_width use_class="true">0</line_width>
+    <line_color>
+      <color name="GROUP-BORDER" red="150" green="155" blue="151">
+      </color>
+    </line_color>
+    <background_color use_class="true">
+      <color name="PRIMARY-HEADER-BACKGROUND" red="151" green="188" blue="202">
+      </color>
+    </background_color>
+    <corner_width>4</corner_width>
+    <corner_height>4</corner_height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <class>TITLE-BAR</class>
+    <text>RF Electron Pickup</text>
+    <x>20</x>
+    <width>560</width>
+    <height>50</height>
+    <font>
+      <font name="Header 1" family="Source Sans Pro" style="BOLD_ITALIC" size="36.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color name="HEADER-TEXT" red="0" green="0" blue="0">
+      </color>
+    </foreground_color>
+    <vertical_alignment>1</vertical_alignment>
+    <wrap_words>false</wrap_words>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_2</name>
+    <actions>
+      <action type="open_display">
+        <file>xt-pico_Eng/Menu.bob</file>
+        <target>tab</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <text>Expert</text>
+    <x>870</x>
+    <y>10</y>
+    <width>70</width>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>BGGrey01_3</name>
+    <x>330</x>
+    <y>60</y>
+    <width>310</width>
+    <height>130</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-titlebar_3</name>
+      <width>310</width>
+      <height>130</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-background_12</name>
+      <x>10</x>
+      <y>50</y>
+      <width>290</width>
+      <height>70</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_60</name>
+      <pv_name>$(P)$(R_TMP100)Value_RBV</pv_name>
+      <x>187</x>
+      <y>74</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_169</name>
+      <text>Temperature:</text>
+      <x>70</x>
+      <y>74</y>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>LGGrey03-title_12</name>
+      <text>    SCU - Board Status</text>
+      <width>310</width>
+      <height>50</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>BGGrey01_4</name>
+    <x>10</x>
+    <y>200</y>
+    <width>310</width>
+    <height>257</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-titlebar_4</name>
+      <width>310</width>
+      <height>257</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-background_13</name>
+      <x>10</x>
+      <y>50</y>
+      <width>290</width>
+      <height>194</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>LGGrey03-title_13</name>
+      <text>IO Expander</text>
+      <width>310</width>
+      <height>50</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_170</name>
+      <text>Test Monitoring:</text>
+      <x>20</x>
+      <y>60</y>
+      <width>110</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="bool_button" version="2.0.0">
+      <name>Boolean Button</name>
+      <pv_name>$(P)$(R_TCA9555)LevelPin7</pv_name>
+      <x>150</x>
+      <y>195</y>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_2</name>
+      <pv_name>$(P)$(R_TCA9555)LevelPin0_RBV</pv_name>
+      <x>150</x>
+      <y>60</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_177</name>
+      <text>Interlock:</text>
+      <x>20</x>
+      <y>96</y>
+      <width>110</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_3</name>
+      <pv_name>$(P)$(R_TCA9555)LevelPin0_RBV</pv_name>
+      <x>150</x>
+      <y>96</y>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_4</name>
+      <pv_name>$(P)$(R_TCA9555)LevelPin0_RBV</pv_name>
+      <x>150</x>
+      <y>131</y>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_179</name>
+      <text>ON</text>
+      <x>175</x>
+      <y>96</y>
+      <width>30</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_180</name>
+      <text>OFF</text>
+      <x>175</x>
+      <y>131</y>
+      <width>30</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_181</name>
+      <text>Test:</text>
+      <x>20</x>
+      <y>195</y>
+      <width>110</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="led" version="2.0.0">
+      <name>LED_5</name>
+      <pv_name>$(P)$(R_TCA9555)LevelPin7_RBV</pv_name>
+      <x>260</x>
+      <y>200</y>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>BGGrey01_5</name>
+    <x>330</x>
+    <y>200</y>
+    <width>310</width>
+    <height>257</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-titlebar_5</name>
+      <width>310</width>
+      <height>257</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-background_14</name>
+      <x>10</x>
+      <y>50</y>
+      <width>290</width>
+      <height>194</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>LGGrey03-title_14</name>
+      <text>Vol/Curr Monitoring</text>
+      <width>310</width>
+      <height>50</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_178</name>
+      <text>Current Consumption:</text>
+      <x>20</x>
+      <y>60</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_61</name>
+      <pv_name>$(P)$(R_LTC2991)CurrMonitor</pv_name>
+      <x>187</x>
+      <y>60</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_188</name>
+      <text>Comparator in:</text>
+      <x>20</x>
+      <y>96</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_66</name>
+      <pv_name>$(P)$(R_LTC2991)Comp_in</pv_name>
+      <x>187</x>
+      <y>96</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_189</name>
+      <text>5V Voltage:</text>
+      <x>20</x>
+      <y>131</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_67</name>
+      <pv_name>$(P)$(R_LTC2991)AnaVol5V</pv_name>
+      <x>187</x>
+      <y>131</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_190</name>
+      <text>Current pickup:</text>
+      <x>20</x>
+      <y>170</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_68</name>
+      <pv_name>$(P)$(R_LTC2991)AnaVolCurr</pv_name>
+      <x>187</x>
+      <y>170</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+  <widget type="group" version="2.0.0">
+    <name>BGGrey01_6</name>
+    <x>650</x>
+    <y>200</y>
+    <width>310</width>
+    <height>257</height>
+    <style>3</style>
+    <background_color>
+      <color name="BACKGROUND" red="220" green="225" blue="221">
+      </color>
+    </background_color>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-titlebar_6</name>
+      <width>310</width>
+      <height>257</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="GROUP-BACKGROUND" red="200" green="205" blue="201">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="rectangle" version="2.0.0">
+      <name>BGGrey01-background_15</name>
+      <x>10</x>
+      <y>50</y>
+      <width>290</width>
+      <height>194</height>
+      <line_width>2</line_width>
+      <line_color>
+        <color name="GROUP-BORDER" red="150" green="155" blue="151">
+        </color>
+      </line_color>
+      <background_color>
+        <color name="BACKGROUND" red="220" green="225" blue="221">
+        </color>
+      </background_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>LGGrey03-title_15</name>
+      <text>Rheostat</text>
+      <width>310</width>
+      <height>50</height>
+      <font>
+        <font family="Source Sans Pro" style="BOLD" size="18.0">
+        </font>
+      </font>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_182</name>
+      <text>Current Consumption:</text>
+      <x>20</x>
+      <y>60</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_69</name>
+      <pv_name>$(P)$(R_LTC2991)CurrMonitor</pv_name>
+      <x>187</x>
+      <y>60</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_191</name>
+      <text>Comparator in:</text>
+      <x>20</x>
+      <y>96</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_70</name>
+      <pv_name>$(P)$(R_LTC2991)Comp_in</pv_name>
+      <x>187</x>
+      <y>96</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_192</name>
+      <text>5V Voltage:</text>
+      <x>20</x>
+      <y>131</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_71</name>
+      <pv_name>$(P)$(R_LTC2991)AnaVol5V</pv_name>
+      <x>187</x>
+      <y>131</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+    <widget type="label" version="2.0.0">
+      <name>Label_193</name>
+      <text>Current pickup:</text>
+      <x>20</x>
+      <y>170</y>
+      <width>157</width>
+      <background_color>
+        <color red="255" green="255" blue="255">
+        </color>
+      </background_color>
+      <horizontal_alignment>2</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <actions>
+      </actions>
+    </widget>
+    <widget type="textupdate" version="2.0.0">
+      <name>Text Update_72</name>
+      <pv_name>$(P)$(R_LTC2991)AnaVolCurr</pv_name>
+      <x>187</x>
+      <y>170</y>
+      <width>80</width>
+      <precision>1</precision>
+      <horizontal_alignment>1</horizontal_alignment>
+      <vertical_alignment>1</vertical_alignment>
+      <rules>
+        <rule name="Change background" prop_id="background_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color red="255" green="255" blue="153">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color red="179" green="230" blue="179">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+        <rule name="Change border" prop_id="border_color" out_exp="false">
+          <exp bool_exp="pv0==4">
+            <value>
+              <color name="YELLOW-BORDER" red="150" green="144" blue="10">
+              </color>
+            </value>
+          </exp>
+          <exp bool_exp="pv0==7">
+            <value>
+              <color name="GREEN-BORDER" red="40" green="140" blue="40">
+              </color>
+            </value>
+          </exp>
+          <pv_name>$(pv_name)</pv_name>
+        </rule>
+      </rules>
+      <border_color>
+        <color name="Grid" red="169" green="169" blue="169">
+        </color>
+      </border_color>
+    </widget>
+  </widget>
+</display>

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <display version="2.0.0">
-  <macros>
-    <P>ETHMOD:</P>
-    <R>I2C1:Res1:</R>
-  </macros>
   <width>1600</width>
   <height>1000</height>
   <background_color>

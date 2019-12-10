@@ -8,13 +8,21 @@ record(calc, "$(P)$(R_LTC2991)CurrMonitor") {
     field(INPB, "$(P)$(R_LTC2991)ValueV2_RBV CP")
 }
 
+record("*", "$(P)$(R_LTC2991)ValueV4_RBV") {
+    field(DESC, "Comparator in")
+    alias("$(P)$(R_LTC2991)Comp_in")
+    field(EGU, "V")
+}
+
 record("*", "$(P)$(R_LTC2991)ValueV5_RBV") {
     field(DESC, "Analog voltage 5V")
+    field(EGU, "V")
     alias("$(P)$(R_LTC2991)AnaVol5V")
 }
 
 record("*", "$(P)$(R_LTC2991)ValueV6_RBV") {
     field(DESC, "Analog voltage current pickup")
+    field(EGU, "V")
     alias("$(P)$(R_LTC2991)AnaVolCurr")
 }
 
@@ -71,4 +79,14 @@ record("*", "$(P)$(R_TCA9555)LevelPin2_RBV") {
 record("*", "$(P)$(R_AD527X)Read")
 {
     field(SCAN, ".5 second")
+}
+
+record("*", "$(P)$(R_AD527X)Value_RBV") {
+    field(DESC, "Resistance readback")
+    field(EGU, "Ohm")
+}
+
+record("*", "$(P)$(R_AD527X)Value") {
+    field(DESC, "Resistance setpoint")
+    field(EGU, "Ohm")
 }
